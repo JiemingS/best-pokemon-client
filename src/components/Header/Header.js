@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
+import './Header.scss'
 
 const authenticatedOptions = (
   <Fragment>
@@ -23,7 +24,7 @@ const alwaysOptions = (
 )
 
 const Header = ({ user }) => (
-  <Navbar bg="primary" variant="dark" expand="md">
+  <Navbar bg="dark" variant="dark" expand="md" className="navbar">
     <Navbar.Brand href="#">
       react-auth-template
     </Navbar.Brand>

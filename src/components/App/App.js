@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Route } from 'react-router-dom'
+import './App.scss'
 
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from '../AutoDismissAlert/AutoDismissAlert'
@@ -31,31 +32,37 @@ class App extends Component {
     const { alerts, user } = this.state
 
     return (
-      <Fragment>
-        <Header user={user} />
-        {alerts.map((alert, index) => (
-          <AutoDismissAlert
-            key={index}
-            heading={alert.heading}
-            variant={alert.variant}
-            message={alert.message}
-          />
-        ))}
-        <main className="container">
-          <Route path='/sign-up' render={() => (
-            <SignUp alert={this.alert} setUser={this.setUser} />
-          )} />
-          <Route path='/sign-in' render={() => (
-            <SignIn alert={this.alert} setUser={this.setUser} />
-          )} />
-          <AuthenticatedRoute user={user} path='/sign-out' render={() => (
-            <SignOut alert={this.alert} clearUser={this.clearUser} user={user} />
-          )} />
-          <AuthenticatedRoute user={user} path='/change-password' render={() => (
-            <ChangePassword alert={this.alert} user={user} />
-          )} />
-        </main>
-      </Fragment>
+      <div className="wholepage">
+        <Fragment>
+          <Header user={user} />
+          <div className="alerts-container">
+            {alerts.map((alert, index) => (
+              <AutoDismissAlert
+                key={index}
+                heading={alert.heading}
+                variant={alert.variant}
+                message={alert.message}
+              />
+            ))}
+          </div>
+          <main className="container maincontainer">
+            <div className="mainpage">
+              <Route path='/sign-up' render={() => (
+                <SignUp alert={this.alert} setUser={this.setUser} />
+              )} />
+              <Route path='/sign-in' render={() => (
+                <SignIn alert={this.alert} setUser={this.setUser} />
+              )} />
+              <AuthenticatedRoute user={user} path='/sign-out' render={() => (
+                <SignOut alert={this.alert} clearUser={this.clearUser} user={user} />
+              )} />
+              <AuthenticatedRoute user={user} path='/change-password' render={() => (
+                <ChangePassword alert={this.alert} user={user} />
+              )} />
+            </div>
+          </main>
+        </Fragment>
+      </div>
     )
   }
 }
