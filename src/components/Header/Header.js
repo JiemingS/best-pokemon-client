@@ -19,12 +19,12 @@ const unauthenticatedOptions = (
 
 const alwaysOptions = (
   <Fragment>
-    <Nav.Link to="/">Home</Nav.Link>
+    <Nav.Link href="/">Home</Nav.Link>
   </Fragment>
 )
 
 const Header = ({ user }) => (
-  <Navbar bg="dark" variant="dark" expand="md" className="navbar">
+  <Navbar bg="dark" variant="dark" expand="md" sticky="top" className="navbar">
     <Navbar.Brand href="#">
       react-auth-template
     </Navbar.Brand>

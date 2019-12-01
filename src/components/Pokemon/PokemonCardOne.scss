@@ -1,0 +1,33 @@
+.lightBlue {
+  background-color: #00bfff
+}
+
+.lightBlue:hover {
+  transform: translateY(-5px);
+  transition-duration: .1s;
+}
+
+.white {
+  color: white;
+  font-size: 137.5%;
+  line-height: 125%;
+  text-transform: none;
+  font-family: "Flexo-Medium",arial,sans-serif;
+}
+
+.red {
+  background-color: #ff0000
+}
+
+.red:hover {
+  transform: translateY(-5px);
+  transition-duration: .1s;
+}
+
+.grey {
+  color: #919191
+}
+
+.bottom {
+  margin-bottom: 2vh
+}
