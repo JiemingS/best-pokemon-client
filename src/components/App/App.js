@@ -11,6 +11,7 @@ import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
 import Pokemon from '../Pokemon/Pokemon.js'
 import Pokedex from '../Pokedex/Pokedex.js'
+import MyPokemons from '../MyPokemons/MyPokemons.js'
 
 class App extends Component {
   constructor () {
@@ -66,6 +67,9 @@ class App extends Component {
               )} />
               <AuthenticatedRoute user={user} exact path='/pokedex' render={() => (
                 <Pokedex />
+              )} />
+              <AuthenticatedRoute user={user} exact path='/myPokemons' render={() => (
+                <MyPokemons />
               )} />
             </div>
           </main>

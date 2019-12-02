@@ -7,7 +7,7 @@ const PokemonCardFour = (props) => {
   return (
     <div className="button">
       <ButtonToolbar>
-        <Button variant="dark">Explore More Pokemon</Button>
+        <Button variant="dark" href='#pokedex'>Explore More Pokemon</Button>
       </ButtonToolbar>
     </div>
   )

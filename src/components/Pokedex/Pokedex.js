@@ -2,7 +2,7 @@ import React from 'react'
 // import { makeStyles } from '@material-ui/core/styles'
 import BottomNavigation from '@material-ui/core/BottomNavigation'
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
-import RestoreIcon from '@material-ui/icons/Restore'
+// import RestoreIcon from '@material-ui/icons/Restore'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 import LocationOnIcon from '@material-ui/icons/LocationOn'
 import HomeIcon from '@material-ui/icons/Home'
@@ -34,8 +34,7 @@ const Pokedex = (props) => {
       >
         <BottomNavigationAction label="Home" href="#pokemons" icon={<HomeIcon />} />
         <BottomNavigationAction label="Pokedex" href="#pokedex" icon={<TonalityIcon className='rotate-icon' />} />
-        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+        <BottomNavigationAction label="DIY" icon={<FavoriteIcon />} />
         <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
       </BottomNavigation>
       <PokedexOne />
