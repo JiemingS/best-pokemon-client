@@ -7,13 +7,9 @@ import FavoriteIcon from '@material-ui/icons/Favorite'
 import LocationOnIcon from '@material-ui/icons/LocationOn'
 import HomeIcon from '@material-ui/icons/Home'
 import TonalityIcon from '@material-ui/icons/Tonality'
-import PokemonCardOne from './PokemonCardOne.js'
-import PokemonCardTwo from './PokemonCardTwo.js'
-import PokemonCardThree from './PokemonCardThree.js'
-import PokemonCardFour from './PokemonCardFour.js'
-import PokemonCardFive from './PokemonCardFive.js'
+import PokedexOne from './PokedexOne.js'
 
-import './Pokemon.scss'
+import './Pokedex.scss'
 
 // const useStyles = makeStyles({
 //   root: {
@@ -22,9 +18,9 @@ import './Pokemon.scss'
 //   }
 // })
 
-const Pokemon = (props) => {
+const Pokedex = (props) => {
   // const classes = useStyles()
-  const [value, setValue] = React.useState(0)
+  const [value, setValue] = React.useState(1)
 
   return (
     <div>
@@ -42,13 +38,9 @@ const Pokemon = (props) => {
         <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
         <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
       </BottomNavigation>
-      <PokemonCardOne />
-      <PokemonCardTwo />
-      <PokemonCardThree />
-      <PokemonCardFour />
-      <PokemonCardFive />
+      <PokedexOne />
     </div>
   )
 }
 
-export default Pokemon
+export default Pokedex
