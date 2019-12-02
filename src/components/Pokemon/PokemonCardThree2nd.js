@@ -40,7 +40,7 @@ class SimpleSlider extends React.Component {
   }
 
   render () {
-    console.log('slider render')
+    // console.log('slider render')
     return (
       <Slider {...this.props.settings}>
         <div><div className="slide-0"><h3>Graph 1</h3></div></div>

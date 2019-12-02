@@ -16,18 +16,25 @@ const PokedexOne = (props) => {
   const [pokesResult, setPokesResult] = useState([])
 
   const handleClick = (e) => {
-    const num = account + 12
-    console.log('num', num)
+    // const num = account + 12
+    // console.log('num', num)
     setAccount(account + 12)
+    // axios(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=${account + 12}`)
+    //   .then(res => {
+    //     console.log(res.data)
+    //     setPokesResult(res.data.results)
+    //   })
+    //   .catch(console.error)
   }
 
   useEffect(() => {
     axios(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=${account}`)
       .then(res => {
+        // console.log(res.data)
         setPokesResult(res.data.results)
       })
       .catch(console.error)
-  }, [])
+  }, [account])
 
   // const handleClick = (e) => {
   //   const num = account + 12

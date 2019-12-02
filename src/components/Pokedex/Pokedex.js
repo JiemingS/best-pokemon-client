@@ -34,7 +34,7 @@ const Pokedex = (props) => {
       >
         <BottomNavigationAction label="Home" href="#pokemons" icon={<HomeIcon />} />
         <BottomNavigationAction label="Pokedex" href="#pokedex" icon={<TonalityIcon className='rotate-icon' />} />
-        <BottomNavigationAction label="DIY" icon={<FavoriteIcon />} />
+        <BottomNavigationAction label="DIY" href="#myPokemons" icon={<FavoriteIcon />} />
         <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
       </BottomNavigation>
       <PokedexOne />

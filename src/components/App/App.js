@@ -69,7 +69,7 @@ class App extends Component {
                 <Pokedex />
               )} />
               <AuthenticatedRoute user={user} exact path='/myPokemons' render={() => (
-                <MyPokemons />
+                <MyPokemons user={user} />
               )} />
             </div>
           </main>

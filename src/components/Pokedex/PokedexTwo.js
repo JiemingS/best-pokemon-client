@@ -14,9 +14,9 @@ const PokedexTwo = (props) => {
       .then(res => {
         setPokeInfo(res.data)
         // setPokeTypes(res.data.types)
-        console.log('res', res)
-        console.log('res.data.types', res.data.types)
-        console.log('res.data.sprites', res.data.sprites.front_default)
+        // console.log('res', res)
+        // console.log('res.data.types', res.data.types)
+        // console.log('res.data.sprites', res.data.sprites.front_default)
         setPokeUrl(res.data.sprites.front_default)
         setPokeTypes(res.data.types.map(type => {
           return type.type.name
@@ -32,24 +32,28 @@ const PokedexTwo = (props) => {
         <Card.Img variant="top" className="pokedexTwoImg" src={pokeUrl} />
         <Card.Body>
           <Card.Text>
-            <div className='pokedexTwoId'>
+            <span className='pokedexTwoId'>
               #{pokeInfo.id}
-            </div>
-            <div className='pokedexTwoName'>
+            </span>
+          </Card.Text>
+          <Card.Text>
+            <span className='pokedexTwoName'>
               <strong>
                 {pokeInfo.name}
               </strong>
-            </div>
-            <div className='pokedexTwoTypes'>
+            </span>
+          </Card.Text>
+          <Card.Text>
+            <span className='pokedexTwoTypes'>
               {pokeTypes.map(type => {
                 return (
-                  <div key={type} className='pokedexTwoType'>
-                    <div className={type}>
+                  <span key={type} className='pokedexTwoType'>
+                    <span className={type}>
                       {type}
-                    </div>
-                  </div>)
+                    </span>
+                  </span>)
               })}
-            </div>
+            </span>
           </Card.Text>
         </Card.Body>
       </Card>
