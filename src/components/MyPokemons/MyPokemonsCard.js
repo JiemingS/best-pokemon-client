@@ -38,11 +38,11 @@ const MyPokemonsCard = (props) => {
             </span>
           </Card.Text>
           <Card.Text className='pokedexTwoType'>
-            <span className='props.typeOne'>
+            <span className={props.typeOne}>
               {props.typeOne}
             </span>
               &
-            <span className='props.typeTwo'>
+            <span className={props.typeTwo}>
               {props.typeTwo}
             </span>
           </Card.Text>

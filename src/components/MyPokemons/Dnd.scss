@@ -1,0 +1,47 @@
+.MyPokemonsDnd {
+  text-align: center;
+}
+
+.MyPokemonsDnd-intro {
+  font-size: large;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* @keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} */
+
+.MyPokemonsDnd-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.item-container {
+  width: 50%;
+  // display: flex;
+}
+
+.card-container {
+  margin-top: 80px;
+}
+
+.item {
+  padding: 10px;
+  border: 1px solid grey;
+  margin-bottom: 20px;
+}
+
+.target {
+  width: 40%;
+  min-height: 200px;
+  border: 1px solid grey;
+}
+
+.TypeTargets {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2vh;
+}

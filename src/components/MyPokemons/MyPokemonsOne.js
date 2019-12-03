@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import MyPokemonsForm from './MyPokemonsForm.js'
-import MyPokemonsIndex from './MyPokemonsIndex.js'
+// import MyPokemonsIndex from './MyPokemonsIndex.js'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
 import { withRouter } from 'react-router-dom'
+import MyPokemonsDnd from './MyPokemonsDnd.js'
 
 const MyPokemonsOne = (props) => {
   const [pokemon, setPokemon] = useState({
@@ -14,8 +15,21 @@ const MyPokemonsOne = (props) => {
   })
 
   const handleChange = event => {
+    console.log('event.target.name', event.target.name)
     event.persist()
     setPokemon(pokemon => ({ ...pokemon, [event.target.name]: event.target.value }))
+  }
+
+  const handleChangeTypeOne = (props) => {
+    // event.persist()
+    console.log('props', props)
+    setPokemon(pokemon => ({ ...pokemon, typeOne: props }))
+  }
+
+  const handleChangeTypeTwo = (props) => {
+    // event.persist()
+    console.log('props', props)
+    setPokemon(pokemon => ({ ...pokemon, typeTwo: props }))
   }
 
   const handleSubmit = event => {
@@ -39,6 +53,8 @@ const MyPokemonsOne = (props) => {
       .catch(console.error)
   }
 
+  // MyPokemonsIndex user={props.user} />
+
   return (
     <div>
       <MyPokemonsForm
@@ -47,7 +63,10 @@ const MyPokemonsOne = (props) => {
         handleSubmit={handleSubmit}
         cancelPath="/"
       />
-      <MyPokemonsIndex user={props.user} />
+      <MyPokemonsDnd
+        handleChangeTypeOne={handleChangeTypeOne}
+        handleChangeTypeTwo={handleChangeTypeTwo}
+      />
     </div>
   )
 }

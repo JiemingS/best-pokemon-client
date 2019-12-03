@@ -1,13 +1,14 @@
 import React from 'react'
 // import { makeStyles } from '@material-ui/core/styles'
-import BottomNavigation from '@material-ui/core/BottomNavigation'
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
+// import BottomNavigation from '@material-ui/core/BottomNavigation'
+// import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
 // import RestoreIcon from '@material-ui/icons/Restore'
-import FavoriteIcon from '@material-ui/icons/Favorite'
-import LocationOnIcon from '@material-ui/icons/LocationOn'
-import HomeIcon from '@material-ui/icons/Home'
-import TonalityIcon from '@material-ui/icons/Tonality'
+// import FavoriteIcon from '@material-ui/icons/Favorite'
+// import LocationOnIcon from '@material-ui/icons/LocationOn'
+// import HomeIcon from '@material-ui/icons/Home'
+// import TonalityIcon from '@material-ui/icons/Tonality'
 import PokedexOne from './PokedexOne.js'
+import BottomNavi from '../Shared/BottomNavi.js'
 
 import './Pokedex.scss'
 
@@ -24,19 +25,10 @@ const Pokedex = (props) => {
 
   return (
     <div>
-      <BottomNavigation
+      <BottomNavi
         value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue)
-        }}
-        showLabels
-        className='bottomNavigation'
-      >
-        <BottomNavigationAction label="Home" href="#pokemons" icon={<HomeIcon />} />
-        <BottomNavigationAction label="Pokedex" href="#pokedex" icon={<TonalityIcon className='rotate-icon' />} />
-        <BottomNavigationAction label="DIY" href="#myPokemons" icon={<FavoriteIcon />} />
-        <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
-      </BottomNavigation>
+        setValue={setValue}
+      />
       <PokedexOne />
     </div>
   )
