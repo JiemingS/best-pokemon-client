@@ -48,7 +48,7 @@ const MyPokemonsSlider = (props) => {
     <div>
       <Typography id="discrete-slider-custom" gutterBottom>
         <span className='heightSlider'>
-          Choose your height
+          Choose the height for your Pokemon ~
         </span>
       </Typography>
       <Slider

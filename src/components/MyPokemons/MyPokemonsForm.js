@@ -16,6 +16,7 @@ const MyPokemonsForm = ({ pokemon, handleSubmit, handleChange, cancelPath, handl
         value={pokemon.name}
         name="name"
         onChange={handleChange}
+        required
       />
       <div className='RandomName'>
         <RandomName handleChangeName={handleChangeName} className='randomName'/>
@@ -32,6 +33,7 @@ const MyPokemonsForm = ({ pokemon, handleSubmit, handleChange, cancelPath, handl
         InputProps={{
           startAdornment: <InputAdornment position="start">cm</InputAdornment>
         }}
+        required
       />
     </div>
     <div className="MyPokemonsFormTypes">
@@ -43,6 +45,7 @@ const MyPokemonsForm = ({ pokemon, handleSubmit, handleChange, cancelPath, handl
         value={pokemon.typeOne}
         name="typeOne"
         onChange={handleChange}
+        required
       />
       <TextField
         label="SecondType"
@@ -51,6 +54,7 @@ const MyPokemonsForm = ({ pokemon, handleSubmit, handleChange, cancelPath, handl
         value={pokemon.typeTwo}
         name="typeTwo"
         onChange={handleChange}
+        required
       />
     </div>
     <div className="MyPokemonsFormUrl">
@@ -61,6 +65,7 @@ const MyPokemonsForm = ({ pokemon, handleSubmit, handleChange, cancelPath, handl
         value={pokemon.imgUrl}
         name="imgUrl"
         onChange={handleChange}
+        required
       />
     </div>
     <div className="MyPokemonsFormButton">

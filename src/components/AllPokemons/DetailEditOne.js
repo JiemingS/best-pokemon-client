@@ -1,18 +1,20 @@
-import React, { useState } from 'react'
-import MyPokemonsForm from './MyPokemonsForm.js'
+import React, { useState, useEffect } from 'react'
+import MyPokemonsForm from '../MyPokemons/MyPokemonsForm.js'
 import { withRouter } from 'react-router-dom'
 // import MyPokemonsIndex from './MyPokemonsIndex.js'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
-import MyPokemonsDnd from './MyPokemonsDnd.js'
-import MyPokemonsDndUrl from './MyPokemonsDndUrl.js'
-import MyPokemonsSlider from './MyPokemonsSlider.js'
+import MyPokemonsDnd from '../MyPokemons/MyPokemonsDnd.js'
+import MyPokemonsDndUrl from '../MyPokemons/MyPokemonsDndUrl.js'
+import MyPokemonsSlider from '../MyPokemons/MyPokemonsSlider.js'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 const MyPokemonsOne = (props) => {
+  console.log('update props', props)
   // const [updated, setUpdated] = useState(false)
+  const [updated, setUpdated] = useState(false)
   const [pokemon, setPokemon] = useState({
     name: '',
     height: '',
@@ -20,6 +22,16 @@ const MyPokemonsOne = (props) => {
     typeTwo: '',
     imgUrl: ''
   })
+
+  useEffect(() => {
+    axios(`${apiUrl}/pokemons/${props.id}`)
+      .then(res => {
+        console.log('res', res)
+        console.log('props', props)
+        setPokemon(res.data.pokemon)
+      })
+      .catch(() => props.alert({ heading: 'That didn\'t work', message: 'Couldn\'t retrieve the requested Pokemon', variant: 'danger' }))
+  }, [])
 
   const handleChange = event => {
     console.log('event.target.name', event.target.name)
@@ -67,8 +79,8 @@ const MyPokemonsOne = (props) => {
     // console.log('props', props)
 
     axios({
-      url: `${apiUrl}/pokemons`,
-      method: 'POST',
+      url: `${apiUrl}/pokemons/${props.id}`,
+      method: 'PATCH',
       headers: {
         'Authorization': `Token token=${props.user.token}`
       },
@@ -81,17 +93,18 @@ const MyPokemonsOne = (props) => {
         typeTwo: '',
         imgUrl: ''
       })))
+      .then(setUpdated(true))
       .then(
-        props.alert({ heading: 'Success', message: 'You created a Pokemon', variant: 'success' })
+        props.alert({ heading: 'Success', message: 'You update a Pokemon', variant: 'success' })
       )
       .catch(() => props.alert({ heading: 'Errr...', message: 'Something went wrong', variant: 'danger' }))
   }
 
   // MyPokemonsIndex user={props.user} />
 
-  // if (updated) {
-  //   props.history.push(`/books/${response.data.book._id}`)
-  // }
+  if (updated) {
+    props.history.push(`/all_DIY_Pokemons/${props.id}`)
+  }
 
   return (
     <div>

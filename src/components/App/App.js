@@ -13,6 +13,8 @@ import Pokemon from '../Pokemon/Pokemon.js'
 import Pokedex from '../Pokedex/Pokedex.js'
 import MyPokemons from '../MyPokemons/MyPokemons.js'
 import AllPokemons from '../AllPokemons/AllPokemons.js'
+import Detail from '../AllPokemons/Detail.js'
+import DetailEdit from '../AllPokemons/DetailEdit.js'
 
 class App extends Component {
   constructor () {
@@ -36,7 +38,7 @@ class App extends Component {
     const { alerts, user } = this.state
 
     return (
-      <div className="wholepage">
+      <div>
         <Fragment>
           <Header user={user} />
           <div className="alerts-container">
@@ -70,10 +72,16 @@ class App extends Component {
                 <Pokedex />
               )} />
               <AuthenticatedRoute user={user} exact path='/myPokemons' render={() => (
-                <MyPokemons user={user} />
+                <MyPokemons alert={this.alert} user={user} />
               )} />
               <AuthenticatedRoute user={user} exact path='/all_DIY_Pokemons' render={() => (
                 <AllPokemons user={user} />
+              )} />
+              <AuthenticatedRoute user={user} exact path='/all_DIY_Pokemons/:id' render={() => (
+                <Detail alert={this.alert} user={user} />
+              )} />
+              <AuthenticatedRoute user={user} exact path='/all_DIY_Pokemons/:id/edit' render={() => (
+                <DetailEdit alert={this.alert} user={user} />
               )} />
             </div>
           </main>

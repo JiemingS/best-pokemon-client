@@ -18,7 +18,7 @@ const MyPokemons = (props) => {
         value={value}
         setValue={setValue}
       />
-      <MyPokemonsOne user={props.user} />
+      <MyPokemonsOne alert={props.alert} user={props.user} />
     </div>
   )
 }

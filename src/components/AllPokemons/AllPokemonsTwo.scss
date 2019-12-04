@@ -1,0 +1,173 @@
+.AllPokemonsTwoImg {
+  background-color: #e6e6e6;
+}
+
+.AllPokemonsTwoBorder {
+  border: none;
+}
+
+.AllPokemonsTwoBorder:hover {
+  text-decoration: none;
+}
+
+.AllPokemonsTwoTypes {
+  display: flex;
+}
+
+.AllPokemonsTwoType {
+  margin-right: 1vh;
+}
+
+.AllPokemonsTwoId {
+  color: grey;
+}
+
+.AllPokemonsTwoName {
+  color: black;
+  font-size: 20px;
+}
+
+.normal {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #b0b0b0;
+  color: black;
+}
+
+.fighting {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #e07528;
+  color: white;
+}
+
+.flying {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: linear-gradient(#00bfff, #d9d9d9);
+  color: black;
+}
+
+.poison {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #d54dff;
+  color: white;
+}
+
+.ground {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: linear-gradient(#ffdd00, #736402);
+  color: black;
+}
+
+.rock {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #615400;
+  color: white;
+}
+
+.bug {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #027d00;
+  color: white;
+}
+
+.ghost {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #7a1c9c;
+  color: white;
+}
+
+.steel {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #7f8c8f;
+  color: black;
+}
+
+.fire {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #eb6e00;
+  color: white;
+}
+
+.water {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #0cafcc;
+  color: white;
+}
+
+.grass {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #1ac918;
+  color: black;
+}
+
+.electric {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #eded00;
+  color: black;
+}
+
+.psychic {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #e202e6;
+  color: white;
+}
+
+.ice {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #0cafcc;
+  color: black;
+}
+
+.dragon {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: linear-gradient(#0092c7, #e35300);
+  color: white;
+}
+
+.dark {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #595959;
+  color: white;
+}
+
+.fairy {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #ff00b3;
+  color: black;
+}
+
+.unknown {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #00307d;
+  color: white;
+}
+
+.shadow {
+  padding-left: .5vh;
+  padding-right: .5vh;
+  background: #01004f;
+  color: white;
+}
+
+.Allpikapika:hover {
+  transform: translateY(-5px);
+  transition-duration: .1s;
+}
