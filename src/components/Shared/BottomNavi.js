@@ -19,7 +19,7 @@ const BottomNavi = (props) => {
       <BottomNavigationAction label="Home" href="#pokemons" icon={<HomeIcon />} />
       <BottomNavigationAction label="Pokedex" href="#pokedex" icon={<TonalityIcon className='rotate-icon' />} />
       <BottomNavigationAction label="DIY" href="#myPokemons" icon={<FavoriteIcon />} />
-      <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+      <BottomNavigationAction label="Nearby" href="#all_DIY_Pokemons" icon={<LocationOnIcon />} />
     </BottomNavigation>
   )
 }

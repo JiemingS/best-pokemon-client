@@ -12,6 +12,7 @@ import ChangePassword from '../ChangePassword/ChangePassword'
 import Pokemon from '../Pokemon/Pokemon.js'
 import Pokedex from '../Pokedex/Pokedex.js'
 import MyPokemons from '../MyPokemons/MyPokemons.js'
+import AllPokemons from '../AllPokemons/AllPokemons.js'
 
 class App extends Component {
   constructor () {
@@ -70,6 +71,9 @@ class App extends Component {
               )} />
               <AuthenticatedRoute user={user} exact path='/myPokemons' render={() => (
                 <MyPokemons user={user} />
+              )} />
+              <AuthenticatedRoute user={user} exact path='/all_DIY_Pokemons' render={() => (
+                <AllPokemons user={user} />
               )} />
             </div>
           </main>

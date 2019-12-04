@@ -17,7 +17,7 @@ class DndTarget extends Component {
 
     return connectDropTarget(
       <div className="target" style={{ borderColor: backgroundColor }}>
-        <div>Drag Type Over Here</div>
+        <div>Drag Img Over Here</div>
       </div>
     )
   }

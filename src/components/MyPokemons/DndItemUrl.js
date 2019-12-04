@@ -33,8 +33,8 @@ class DndItem extends Component {
     const { isDragging, connectDragSource, item } = this.props
     const opacity = isDragging ? 0 : 1
     return connectDragSource(
-      <div className="item" style={{ opacity }}>
-        <span>{item.name}</span>
+      <div className="itemUrl" style={{ opacity }}>
+        <span><img src={item.id} className="itemImg"/></span>
       </div>
     )
   }

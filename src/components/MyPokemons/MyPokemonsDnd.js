@@ -5,14 +5,33 @@ import Target from './DndTarget.js'
 import './Dnd.scss'
 import HTML5Backend from 'react-dnd-html5-backend'
 import { DndProvider } from 'react-dnd'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 class MyPokemonsDnd extends Component {
   state = {
     items: [
       { id: 'normal', name: 'normal' },
-      { id: 2, name: 'Item 2' },
-      { id: 3, name: 'Item 3' },
-      { id: 4, name: 'Item 4' }
+      { id: 'fighting', name: 'fighting' },
+      { id: 'flying', name: 'flying' },
+      { id: 'poison', name: 'poison' },
+      { id: 'ground', name: 'ground' },
+      { id: 'rock', name: 'rock' },
+      { id: 'bug', name: 'bug' },
+      { id: 'ghost', name: 'ghost' },
+      { id: 'steel', name: 'steel' },
+      { id: 'fire', name: 'fire' },
+      { id: 'water', name: 'water' },
+      { id: 'grass', name: 'grass' },
+      { id: 'electric', name: 'electric' },
+      { id: 'psychic', name: 'psychic' },
+      { id: 'ice', name: 'ice' },
+      { id: 'dragon', name: 'dragon' },
+      { id: 'dark', name: 'dark' },
+      { id: 'fairy', name: 'fairy' },
+      { id: 'unknown', name: 'unknown' },
+      { id: 'shadow', name: 'shadow' }
     ],
     now: 1
   }
@@ -45,13 +64,19 @@ class MyPokemonsDnd extends Component {
           <div className="MyPokemonsDnd-intro">
             <div className="TypeTargets">
             </div>
+            <Target />
             <div className="MyPokemonsDnd-container">
               <div className="item-container">
-                {this.state.items.map((item, index) => (
-                  <DndItem key={item.id} item={item} handleDrop={(id) => this.deleteItem(id)} />
-                ))}
+                <Container>
+                  <Row>
+                    {this.state.items.map((item, index) => (
+                      <Col xs={6} md={4} key={item.id}>
+                        <DndItem key={item.id} item={item} handleDrop={(id) => this.deleteItem(id)} />
+                      </Col>
+                    ))}
+                  </Row>
+                </Container>
               </div>
-              <Target />
             </div>
           </div>
         </div>

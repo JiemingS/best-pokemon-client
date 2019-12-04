@@ -2,9 +2,11 @@ import React from 'react'
 import TextField from '@material-ui/core/TextField'
 import CheckIcon from '@material-ui/icons/Check'
 import Button from '@material-ui/core/Button'
+import InputAdornment from '@material-ui/core/InputAdornment'
+import RandomName from './MyPokemonsRandomName'
 import './MyPokemonsForm.scss'
 
-const MyPokemonsForm = ({ pokemon, handleSubmit, handleChange, cancelPath }) => (
+const MyPokemonsForm = ({ pokemon, handleSubmit, handleChange, cancelPath, handleChangeName }) => (
   <form onSubmit={handleSubmit}>
     <div className="MyPokemonsFormName">
       <TextField
@@ -14,6 +16,22 @@ const MyPokemonsForm = ({ pokemon, handleSubmit, handleChange, cancelPath }) => 
         value={pokemon.name}
         name="name"
         onChange={handleChange}
+      />
+      <div className='RandomName'>
+        <RandomName handleChangeName={handleChangeName} className='randomName'/>
+      </div>
+    </div>
+    <div className="MyPokemonsFormName">
+      <TextField
+        label="Height"
+        variant="outlined"
+        placeholder="Height"
+        value={pokemon.height}
+        name="height"
+        onChange={handleChange}
+        InputProps={{
+          startAdornment: <InputAdornment position="start">cm</InputAdornment>
+        }}
       />
     </div>
     <div className="MyPokemonsFormTypes">
