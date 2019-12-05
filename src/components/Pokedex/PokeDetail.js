@@ -5,6 +5,8 @@ import './PokeDetail.scss'
 import BottomNavi from '../Shared/BottomNavi.js'
 import PokeDetailInfo from './PokeDetailInfo.js'
 import EvoChain from './EvoChain.js'
+import Button from 'react-bootstrap/Button'
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 
 const PokedexDetail = (props) => {
   // console.log('PokedexDetail props', props)
@@ -24,6 +26,7 @@ const PokedexDetail = (props) => {
   }, [])
 
   if (chain.url !== undefined) {
+    console.log('chain.url', chain.url)
     evoChainHtml = (
       <EvoChain
         url = {chain.url}
@@ -51,6 +54,11 @@ const PokedexDetail = (props) => {
           setChain = {setChain}
         />
         {evoChainHtml}
+        <div className="button">
+          <ButtonToolbar>
+            <Button variant="info" href='#pokedex'><span style={{ color: 'white' }}>Explore More Pokemon</span></Button>
+          </ButtonToolbar>
+        </div>
       </div>
     )
   }

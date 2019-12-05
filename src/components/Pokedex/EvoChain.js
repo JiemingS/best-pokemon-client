@@ -3,9 +3,12 @@ import axios from 'axios'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import EvoChainIcon from './EvoChainIcon.js'
+
+import './EvoChain.scss'
 
 const EvoChain = (props) => {
-  console.log('EvoChain props.url', props.url)
+  // console.log('EvoChain props.url', props.url)
   const [urlArray, setUrlArray] = useState([])
 
   if (props.url) {
@@ -23,13 +26,13 @@ const EvoChain = (props) => {
           let lifeChain = res.data.chain
           const lifeUrls = []
           while (lifeChain.evolves_to[0] !== undefined) {
-            console.log('lifeChain', lifeChain)
-            console.log('lifeChain', lifeChain.species.url)
+            // console.log('lifeChain', lifeChain)
+            // console.log('lifeChain', lifeChain.species.url)
             lifeUrls.push(lifeChain.species.url)
             lifeChain = lifeChain.evolves_to[0]
           }
           lifeUrls.push(lifeChain.species.url)
-          console.log('lifeUrls', lifeUrls)
+          // console.log('lifeUrls', lifeUrls)
           setUrlArray(lifeUrls)
         })
         .catch(console.error)
@@ -37,15 +40,21 @@ const EvoChain = (props) => {
   }
 
   return (
-    <Container>
-      <Row>
-        {urlArray.map(url => (
-          <Col sm={12 / urlArray.length} key={url}>
-            sm={12 / urlArray.length}
-          </Col>
-        ))}
-      </Row>
-    </Container>
+    <div className='evoContainer'>
+      <Container>
+        <h2 style={{
+          color: '#fff',
+          paddingTop: '1vh'
+        }}>Evolutions</h2>
+        <Row>
+          {urlArray.map(url => (
+            <Col sm={12 / urlArray.length} key={url}>
+              <EvoChainIcon url={url} />
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </div>
   )
 }
 

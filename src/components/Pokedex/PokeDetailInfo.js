@@ -9,7 +9,7 @@ import LeftChart from './LeftChart.js'
 const PokeDetailInfo = (props) => {
   // console.log('PokeDetailInfo props', props)
   // console.log('PokeDetailInfo props.pokemon.stats', props.pokemon.stats)
-  // console.log('PokeDetailInfo props.pokemon.forms.url', props.pokemon.species.url)
+  console.log('PokeDetailInfo props.pokemon.forms.url', props.pokemon.species.url)
   const [chartData] = useState({
     labels: ['speed', 'special-defense', 'special-attack', 'defense', 'attack', 'hp'],
     datasets: [
