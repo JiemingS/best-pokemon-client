@@ -22,38 +22,38 @@ const MyPokemonsOne = (props) => {
   })
 
   const handleChange = event => {
-    console.log('event.target.name', event.target.name)
+    // console.log('event.target.name', event.target.name)
     event.persist()
     setPokemon(pokemon => ({ ...pokemon, [event.target.name]: event.target.value }))
   }
 
   const handleChangeTypeOne = (props) => {
     // event.persist()
-    console.log('props', props)
+    // console.log('props', props)
     setPokemon(pokemon => ({ ...pokemon, typeOne: props }))
   }
 
   const handleChangeTypeTwo = (props) => {
     // event.persist()
-    console.log('props', props)
+    // console.log('props', props)
     setPokemon(pokemon => ({ ...pokemon, typeTwo: props }))
   }
 
   const handleChangeUrl = (props) => {
     // event.persist()
-    console.log('props', props)
+    // console.log('props', props)
     setPokemon(pokemon => ({ ...pokemon, imgUrl: props }))
   }
 
   const handleChangeHeight = (props) => {
     // event.persist()
-    console.log('props', props)
+    // console.log('props', props)
     setPokemon(pokemon => ({ ...pokemon, height: props }))
   }
 
   const handleChangeName = (props) => {
     // event.persist()
-    console.log('props', props)
+    // console.log('props', props)
     setPokemon(pokemon => ({ ...pokemon, name: props }))
   }
 

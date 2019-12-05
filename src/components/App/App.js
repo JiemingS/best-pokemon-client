@@ -11,6 +11,7 @@ import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
 import Pokemon from '../Pokemon/Pokemon.js'
 import Pokedex from '../Pokedex/Pokedex.js'
+import PokeDetail from '../Pokedex/PokeDetail.js'
 import MyPokemons from '../MyPokemons/MyPokemons.js'
 import AllPokemons from '../AllPokemons/AllPokemons.js'
 import Detail from '../AllPokemons/Detail.js'
@@ -65,11 +66,14 @@ class App extends Component {
               <AuthenticatedRoute user={user} path='/change-password' render={() => (
                 <ChangePassword alert={this.alert} user={user} />
               )} />
-              <AuthenticatedRoute user={user} path='/pokemons' render={() => (
+              <AuthenticatedRoute user={user} exact path='/pokemons' render={() => (
                 <Pokemon />
               )} />
               <AuthenticatedRoute user={user} exact path='/pokedex' render={() => (
                 <Pokedex />
+              )} />
+              <AuthenticatedRoute user={user} exact path='/pokedex/:name' render={() => (
+                <PokeDetail alert={this.alert} />
               )} />
               <AuthenticatedRoute user={user} exact path='/myPokemons' render={() => (
                 <MyPokemons alert={this.alert} user={user} />

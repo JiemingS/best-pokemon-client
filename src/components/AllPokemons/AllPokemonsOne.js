@@ -14,10 +14,10 @@ const AllPokemonsOne = (props) => {
   // const [force, forceUpdate] = useState(true)
 
   useEffect(() => {
-    console.log('load again')
+    // console.log('load again')
     axios(`${apiUrl}/pokemons`)
       .then(res => {
-        console.log(res.data.pokemons)
+        // console.log(res.data.pokemons)
         setPokesResult(res.data.pokemons)
       })
       .catch(console.error)

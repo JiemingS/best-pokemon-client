@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom'
 
 const DetailEdit = (props) => {
   const [value, setValue] = React.useState(2)
-  console.log('edit props', props)
+  // console.log('edit props', props)
 
   return (
     <div>

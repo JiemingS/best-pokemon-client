@@ -14,8 +14,8 @@ const Detail = (props) => {
   useEffect(() => {
     axios(`${apiUrl}/pokemons/${props.match.params.id}`)
       .then(res => {
-        console.log('res', res)
-        console.log('props', props)
+        // console.log('res', res)
+        // console.log('props', props)
         setPokemon(res.data.pokemon)
       })
       .catch(() => props.alert({ heading: 'That didn\'t work', message: 'Couldn\'t retrieve the requested Pokemon', variant: 'danger' }))
@@ -38,8 +38,8 @@ const Detail = (props) => {
       })
   }
 
-  console.log('props', props)
-  console.log('pokemon', pokemon)
+  // console.log('props', props)
+  // console.log('pokemon', pokemon)
 
   if (!pokemon) {
     return <p>Loading stuff...</p>

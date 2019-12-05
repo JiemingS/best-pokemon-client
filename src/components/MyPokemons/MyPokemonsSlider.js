@@ -35,8 +35,8 @@ const MyPokemonsSlider = (props) => {
   // }
 
   const changeSlider = (event, value) => {
-    console.log('value', value)
-    console.log('this.props', props)
+    // console.log('value', value)
+    // console.log('this.props', props)
     props.handleChangeHeight(value)
   }
 

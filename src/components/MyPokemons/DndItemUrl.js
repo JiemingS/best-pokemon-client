@@ -6,13 +6,13 @@ import { DragSource } from 'react-dnd'
 
 const itemSource = {
   beginDrag (props) {
-    console.log('dragging')
+    // console.log('dragging')
     return props.item
   },
   endDrag (props, monitor, component) {
-    console.log('end dragging')
+    // console.log('end dragging')
     if (!monitor.didDrop()) {
-      console.log('nope')
+      // console.log('nope')
       return
     }
 

@@ -1,13 +1,13 @@
 import React from 'react'
 
 const DetailOneRight = (props) => {
-  console.log('propsOfDetailRight', props)
+  // console.log('propsOfDetailRight', props)
 
   const createdAt = props.pokemon.createdAt
   const day = createdAt.split('T').join(', ').split('Z').join(', ').split('.').join(', ').split(', ')[0]
   // const time = createdAt.split('T').join(', ').split('Z').join(', ').split('.').join(', ').split(', ')[1]
-  console.log('createdAt', createdAt)
-  console.log('day', day)
+  // console.log('createdAt', createdAt)
+  // console.log('day', day)
   // console.log('time', time)
 
   return (

@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card'
 import './PokedexTwo.scss'
 
 const PokedexTwo = (props) => {
+  // console.log('pokedexTwo', props)
   const [pokeInfo, setPokeInfo] = useState({})
   const [pokeUrl, setPokeUrl] = useState('')
   const [pokeTypes, setPokeTypes] = useState([])
@@ -28,7 +29,7 @@ const PokedexTwo = (props) => {
 
   return (
     <Col sm={3}>
-      <Card className='pokedexTwoBorder pikapika' as={'a'} href='#pokemons'>
+      <Card className='pokedexTwoBorder pikapika' as={'a'} href={`#pokedex/${props.name}`}>
         <Card.Img variant="top" className="pokedexTwoImg" src={pokeUrl} />
         <Card.Body>
           <Card.Text>

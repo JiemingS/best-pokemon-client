@@ -6,7 +6,7 @@ import DetailOneRight from './DetailOneRight'
 import './DetailOne.scss'
 
 const DetailONe = (props) => {
-  console.log('propsOfDetail', props)
+  // console.log('propsOfDetail', props)
 
   return (
     <Container>

@@ -11,7 +11,7 @@ const RandomName = (props) => {
     const lastName = ['Smith', 'Johnson', 'Williams', 'Jones', 'Brown', 'Davis', 'Miller', 'Wilson', 'Moore', 'Taylor', 'Thomas', 'Jackson', 'Martin', 'Lee', 'Thompson', 'White', 'Harris']
 
     const randomName = lastName[getRandomInt(0, lastName.length)]
-    console.log('randomName', randomName)
+    // console.log('randomName', randomName)
     props.handleChangeName(randomName)
   }
 

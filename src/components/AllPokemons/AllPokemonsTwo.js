@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card'
 import './AllPokemonsTwo.scss'
 
 const AllPokemonsTwo = (props) => {
-  console.log('props', props)
+  // console.log('props', props)
   // const [pokeInfo, setPokeInfo] = useState({})
   // const [pokeUrl, setPokeUrl] = useState('')
   // const [pokeTypes, setPokeTypes] = useState([])

@@ -24,8 +24,8 @@ class MyPokemonsDndUrl extends Component {
   }
 
   deleteItem = id => {
-    console.log('this.props', this.props)
-    console.log('delete id: ' + id)
+    // console.log('this.props', this.props)
+    // console.log('delete id: ' + id)
     this.props.handleChangeUrl(id)
     // console.log('now', this.state.now)
     // if (this.state.now === 2) {

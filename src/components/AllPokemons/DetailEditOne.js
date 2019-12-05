@@ -12,7 +12,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 const MyPokemonsOne = (props) => {
-  console.log('update props', props)
+  // console.log('update props', props)
   // const [updated, setUpdated] = useState(false)
   const [updated, setUpdated] = useState(false)
   const [pokemon, setPokemon] = useState({
@@ -26,46 +26,46 @@ const MyPokemonsOne = (props) => {
   useEffect(() => {
     axios(`${apiUrl}/pokemons/${props.id}`)
       .then(res => {
-        console.log('res', res)
-        console.log('props', props)
+        // console.log('res', res)
+        // console.log('props', props)
         setPokemon(res.data.pokemon)
       })
       .catch(() => props.alert({ heading: 'That didn\'t work', message: 'Couldn\'t retrieve the requested Pokemon', variant: 'danger' }))
   }, [])
 
   const handleChange = event => {
-    console.log('event.target.name', event.target.name)
+    // console.log('event.target.name', event.target.name)
     event.persist()
     setPokemon(pokemon => ({ ...pokemon, [event.target.name]: event.target.value }))
   }
 
   const handleChangeTypeOne = (props) => {
     // event.persist()
-    console.log('props', props)
+    // console.log('props', props)
     setPokemon(pokemon => ({ ...pokemon, typeOne: props }))
   }
 
   const handleChangeTypeTwo = (props) => {
     // event.persist()
-    console.log('props', props)
+    // console.log('props', props)
     setPokemon(pokemon => ({ ...pokemon, typeTwo: props }))
   }
 
   const handleChangeUrl = (props) => {
     // event.persist()
-    console.log('props', props)
+    // console.log('props', props)
     setPokemon(pokemon => ({ ...pokemon, imgUrl: props }))
   }
 
   const handleChangeHeight = (props) => {
     // event.persist()
-    console.log('props', props)
+    // console.log('props', props)
     setPokemon(pokemon => ({ ...pokemon, height: props }))
   }
 
   const handleChangeName = (props) => {
     // event.persist()
-    console.log('props', props)
+    // console.log('props', props)
     setPokemon(pokemon => ({ ...pokemon, name: props }))
   }
 

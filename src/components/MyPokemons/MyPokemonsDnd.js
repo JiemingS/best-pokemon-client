@@ -37,9 +37,9 @@ class MyPokemonsDnd extends Component {
   }
 
   deleteItem = id => {
-    console.log('this.props', this.props)
-    console.log('delete id: ' + id)
-    console.log('now', this.state.now)
+    // console.log('this.props', this.props)
+    // console.log('delete id: ' + id)
+    // console.log('now', this.state.now)
     if (this.state.now === 2) {
       this.setState({ now: 1 })
       this.props.handleChangeTypeTwo(id)

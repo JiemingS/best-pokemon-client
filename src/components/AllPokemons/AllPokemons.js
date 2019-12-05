@@ -6,7 +6,7 @@ const AllPokemons = (props) => {
   // const classes = useStyles()
   const [value, setValue] = React.useState(3)
 
-  console.log(props.user)
+  // console.log(props.user)
 
   return (
     <div>
