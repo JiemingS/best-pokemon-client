@@ -26,7 +26,7 @@ const PokedexDetail = (props) => {
   }, [])
 
   if (chain.url !== undefined) {
-    console.log('chain.url', chain.url)
+    // console.log('chain.url', chain.url)
     evoChainHtml = (
       <EvoChain
         url = {chain.url}

@@ -16,6 +16,8 @@ import MyPokemons from '../MyPokemons/MyPokemons.js'
 import AllPokemons from '../AllPokemons/AllPokemons.js'
 import Detail from '../AllPokemons/Detail.js'
 import DetailEdit from '../AllPokemons/DetailEdit.js'
+// import AuthHome from '../AuthHome/AuthHome.js'
+import Home from '../Home/Home.js'
 
 class App extends Component {
   constructor () {
@@ -60,8 +62,8 @@ class App extends Component {
               <Route path='/sign-in' render={() => (
                 <SignIn alert={this.alert} setUser={this.setUser} />
               )} />
-              <AuthenticatedRoute user={user} path='/' render={() => (
-                <AuthHome alert={this.alert} user={user} />
+              <Route exact path='/' render={() => (
+                <Home alert={this.alert} user={user} />
               )} />
               <AuthenticatedRoute user={user} path='/sign-out' render={() => (
                 <SignOut alert={this.alert} clearUser={this.clearUser} user={user} />

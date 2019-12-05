@@ -62,10 +62,10 @@ const EvoChainIcon = (props) => {
   useEffect(() => {
     axios(props.url)
       .then(res1 => {
-        console.log('res1.data.varieties[0].pokemon.url', res1.data.varieties[0].pokemon.url)
+        // console.log('res1.data.varieties[0].pokemon.url', res1.data.varieties[0].pokemon.url)
         axios(res1.data.varieties[0].pokemon.url)
           .then(res2 => {
-            console.log('second axios res2.data.sprites.front_default', res2.data.sprites.front_default)
+            // console.log('second axios res2.data.sprites.front_default', res2.data.sprites.front_default)
             setOneOfChain(res2.data)
           })
       })
