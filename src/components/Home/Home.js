@@ -1,6 +1,7 @@
 import React from 'react'
 import BottomNavi from '../Shared/BottomNavi.js'
 import YouTube from 'react-youtube'
+import './Home.scss'
 
 const Home = (props) => {
   const [value, setValue] = React.useState(-1)
@@ -34,7 +35,24 @@ const Home = (props) => {
     )
   } else {
     return (
-      <h1>Why not SIGN IN first</h1>
+      <div>
+        <div className="youtubeVideo">
+          <YouTube
+            videoId="QWGGtKgalDo"
+            opts={opts}
+            onReady={videoOnReady}
+          />
+        </div>
+        <h1 className="page-main-title push-1">
+          Welcome to the Best-Pokémon!
+        </h1>
+        <h3 className="page-main-title push-1">
+          How about get more informations after sign in ~
+        </h3>
+        <div className="imgBelowYoutube">
+          <img src="https://assets.pokemon.com/static2/_ui/img/account/pokemon-login.png" alt="Characters" />
+        </div>
+      </div>
     )
   }
 }

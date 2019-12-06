@@ -1,21 +1,39 @@
 @import '~bootstrap/scss/bootstrap';
 
+.fragment {
+  background-image: url('https://assets.pokemon.com/static2/_ui/img/chrome/body_gray_bg.png');
+  min-height: 100vh;
+}
+
 .wholepage {
   // background-color: grey;
   // height: 100%;
 }
 
 .maincontainer {
-  // background-color: lightgrey;
-  // height: 100%;
-  max-width: 50vw;
+  // padding-top: 5vh;
+  // background-color: #43B2BC;
+  // min-height: 100vh;
+  // max-width: 1300px;
+  background-image: url('https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png');
+  // max-width: 50vw;
+  // background-position-x: initial;
+  // background-position-y: initial;
+  // background-size: initial;
+  // background-repeat-x: initial;
+  // background-repeat-y: initial;
+  // background-attachment: initial;
+  // background-origin: initial;
+  // background-clip: initial;
+  background-color: rgb(255, 255, 255);
+  min-height: 93vh;
 }
 
 .mainpage {
-  // background-color: white;
+  background-color: white;
   // height: 100vh;
-  // margin-left: 18vh;
-  // margin-right: 18vh;
+  margin-left: 18vh;
+  margin-right: 18vh;
 }
 
 // .hi {

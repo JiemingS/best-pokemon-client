@@ -41,7 +41,7 @@ class App extends Component {
     const { alerts, user } = this.state
 
     return (
-      <div>
+      <div className="fragment">
         <Fragment>
           <Header user={user} />
           <div className="alerts-container">
