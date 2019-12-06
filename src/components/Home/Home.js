@@ -31,7 +31,6 @@ const Home = (props) => {
           videoId={props.id}
           opts={opts}
           onReady={videoOnReady}
-          host='https://www.youtube.com'
         />
       </div>
     )
