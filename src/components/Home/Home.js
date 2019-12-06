@@ -5,7 +5,7 @@ import './Home.scss'
 
 const Home = (props) => {
   const [value, setValue] = React.useState(-1)
-  console.log('props', props)
+  // console.log('props', props)
   const opts = {
     height: '390',
     width: '100%',
@@ -16,6 +16,7 @@ const Home = (props) => {
 
   const videoOnReady = (event) => {
     event.target.pauseVideo()
+    // console.log(event.target)
   }
   // https://www.youtube.com/watch?v=QWGGtKgalDo&feature=youtu.be
 
@@ -27,9 +28,10 @@ const Home = (props) => {
           setValue={setValue}
         />
         <YouTube
-          videoId="QWGGtKgalDo"
+          videoId={props.id}
           opts={opts}
           onReady={videoOnReady}
+          host='https://www.youtube.com'
         />
       </div>
     )
