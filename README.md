@@ -2,7 +2,7 @@
 
 ## Link to both back_end and front_end
 - [API Deploy](https://whispering-brushlands-72580.herokuapp.com/)
-- [Client Deploy](https://jiemings.github.io/project_2-_client/)
+- [Client Deploy](https://jiemings.github.io/best-pokemon-client/)
 - [Best-Pokemon API](https://github.com/JiemingS/best-pokemon-api)
 - [Best-Pokemon Client](https://github.com/JiemingS/best-pokemon-client)
 
